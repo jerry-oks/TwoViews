@@ -1,24 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TwoViews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPI-Fb-ZSE" userLabel="UpperView">
+                                <rect key="frame" x="16" y="75" width="398" height="398"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swift" translatesAutoresizingMaskIntoConstraints="NO" id="Cb0-Fg-RNu">
+                                        <rect key="frame" x="16" y="282" width="366" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="x0B-1N-A4o"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Cb0-Fg-RNu" secondAttribute="trailing" constant="16" id="Ykb-kN-EMl"/>
+                                    <constraint firstAttribute="bottom" secondItem="Cb0-Fg-RNu" secondAttribute="bottom" constant="16" id="apq-r2-zNq"/>
+                                    <constraint firstItem="Cb0-Fg-RNu" firstAttribute="leading" secondItem="fPI-Fb-ZSE" secondAttribute="leading" constant="16" id="iNP-O7-JUF"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Pf-Xi-9X6" userLabel="LowerView">
+                                <rect key="frame" x="16" y="489" width="398" height="393"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book" translatesAutoresizingMaskIntoConstraints="NO" id="AJJ-H7-W4N">
+                                        <rect key="frame" x="16" y="16" width="366" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="mUz-yz-yg7"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                                <constraints>
+                                    <constraint firstItem="AJJ-H7-W4N" firstAttribute="leading" secondItem="0Pf-Xi-9X6" secondAttribute="leading" constant="16" id="7jx-tG-1mj"/>
+                                    <constraint firstAttribute="trailing" secondItem="AJJ-H7-W4N" secondAttribute="trailing" constant="16" id="ii3-HX-bap"/>
+                                    <constraint firstItem="AJJ-H7-W4N" firstAttribute="top" secondItem="0Pf-Xi-9X6" secondAttribute="top" constant="16" id="voH-nz-m61"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fPI-Fb-ZSE" secondAttribute="trailing" constant="16" id="96t-4o-pfJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Pf-Xi-9X6" secondAttribute="trailing" constant="16" id="FI8-rP-HH3"/>
+                            <constraint firstItem="fPI-Fb-ZSE" firstAttribute="height" secondItem="0Pf-Xi-9X6" secondAttribute="height" multiplier="1.01355" id="FUb-XN-fRJ"/>
+                            <constraint firstItem="0Pf-Xi-9X6" firstAttribute="top" secondItem="fPI-Fb-ZSE" secondAttribute="bottom" constant="16" id="I61-XE-nkz"/>
+                            <constraint firstItem="fPI-Fb-ZSE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="ORo-oU-HaD"/>
+                            <constraint firstItem="0Pf-Xi-9X6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Yqq-US-Uam"/>
+                            <constraint firstItem="fPI-Fb-ZSE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dE1-tz-e79"/>
+                            <constraint firstItem="0Pf-Xi-9X6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-16" id="gGW-VM-ioW"/>
+                            <constraint firstItem="0Pf-Xi-9X6" firstAttribute="top" secondItem="fPI-Fb-ZSE" secondAttribute="bottom" constant="16" id="x5r-X2-cQr"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="29.302325581395348" y="-2.5751072961373391"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="book" width="3878" height="1343"/>
+        <image name="swift" width="4128" height="1343"/>
+        <systemColor name="secondarySystemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
